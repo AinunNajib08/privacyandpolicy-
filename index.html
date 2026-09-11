@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - GPS Map Camera</title>
+  <meta name="description" content="Kebijakan Privasi / Privacy Policy untuk aplikasi Android GPS Map Camera (com.nadirah.labs.gpsmapcamera).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #10B981;
+      --primary-dark: #059669;
+      --primary-light: #D1FAE5;
+      --accent-blue: #3B82F6;
+      --accent-amber: #F59E0B;
+      --bg: #0F172A;
+      --card-bg: #1E293B;
+      --card-border: #334155;
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --text-sub: #CBD5E1;
+      --badge-bg: #1E293B;
+      --code-bg: #0F172A;
+      --table-header: #334155;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 0;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    /* Header & Hero */
+    header {
+      text-align: center;
+      margin-bottom: 36px;
+      position: relative;
+    }
+
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34D399;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .app-badge svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #FFFFFF 0%, #CBD5E1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .meta-info {
+      color: var(--text-muted);
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .meta-info span {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Language Switcher */
+    .lang-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin: 24px 0 32px;
+    }
+
+    .lang-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 8px 18px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .lang-btn:hover {
+      border-color: var(--primary);
+      color: var(--text-main);
+    }
+
+    .lang-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #042F2E;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+    }
+
+    /* Highlights Banner */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .highlight-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .highlight-card:hover {
+      border-color: rgba(16, 185, 129, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .highlight-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .icon-green { background: rgba(16, 185, 129, 0.15); color: #10B981; }
+    .icon-blue { background: rgba(59, 130, 246, 0.15); color: #3B82F6; }
+    .icon-amber { background: rgba(245, 158, 11, 0.15); color: #F59E0B; }
+
+    .highlight-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    .highlight-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Content Sections */
+    .content-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #F1F5F9;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 12px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 18px 0 8px;
+      color: #E2E8F0;
+    }
+
+    p {
+      color: var(--text-sub);
+      font-size: 14.5px;
+      margin-bottom: 14px;
+    }
+
+    ul, ol {
+      color: var(--text-sub);
+      font-size: 14.5px;
+      padding-left: 22px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--code-bg);
+      border: 1px solid var(--card-border);
+      padding: 2px 7px;
+      border-radius: 5px;
+      font-size: 12.5px;
+      color: #34D399;
+    }
+
+    /* Permission List */
+    .permission-item {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+
+    .permission-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .perm-name {
+      font-weight: 700;
+      font-size: 14.5px;
+      color: #F8FAFC;
+    }
+
+    .perm-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      background: #020617;
+      color: #60A5FA;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid #1E293B;
+    }
+
+    .permission-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* Google Play Data Safety Table */
+    .table-container {
+      overflow-x: auto;
+      margin: 16px 0;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--card-border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13.5px;
+    }
+
+    th {
+      background: var(--table-header);
+      color: #F8FAFC;
+      padding: 12px 14px;
+      font-weight: 700;
+    }
+
+    td {
+      padding: 12px 14px;
+      border-top: 1px solid var(--card-border);
+      color: var(--text-sub);
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 11.5px;
+      font-weight: 700;
+    }
+
+    .status-no {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34D399;
+    }
+
+    .status-yes-local {
+      background: rgba(59, 130, 246, 0.2);
+      color: #93C5FD;
+    }
+
+    /* Contact Box */
+    .contact-card {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-top: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 12px;
+      font-size: 14.5px;
+    }
+
+    .contact-item a {
+      color: #34D399;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--card-border);
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        color: #111827;
+      }
+      .content-box, .highlight-card, .permission-item {
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        color: #111827;
+      }
+      .lang-switcher {
+        display: none;
+      }
+      h1, h2, h3, strong {
+        color: #000000 !important;
+        -webkit-text-fill-color: initial;
+      }
+      p, li, td {
+        color: #374151 !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 24px 16px 60px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      .content-box {
+        padding: 20px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Header -->
+  <header>
+    <div class="app-badge">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      GPS Map Camera
+    </div>
+    <h1 id="page-title">Kebijakan Privasi</h1>
+    <div class="meta-info">
+      <span><strong>Aplikasi:</strong> GPS Map Camera</span>
+      <span><strong>ID Paket:</strong> <code>com.nadirah.labs.gpsmapcamera</code></span>
+      <span><strong>Pembaruan Terakhir:</strong> 11 September 2026</span>
+    </div>
+
+    <!-- Language Selector -->
+    <div class="lang-switcher">
+      <button class="lang-btn active" id="btn-id" onclick="setLanguage('id')">
+        🇮🇩 Bahasa Indonesia
+      </button>
+      <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">
+        🇬🇧 English (Play Store Standard)
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- INDONESIAN CONTENT (Default) -->
+  <!-- ========================================================================= -->
+  <div id="content-id">
+    <!-- Quick Highlights -->
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="highlight-icon icon-green">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        </div>
+        <h3>100% Pemrosesan Lokal</h3>
+        <p>Semua foto, video, dan stempel koordinat GPS diproses langsung di ponsel Anda. Tidak ada data yang diunggah ke server cloud kami.</p>
+      </div>
+
+      <div class="highlight-card">
+        <div class="highlight-icon icon-blue">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        </div>
+        <h3>Tanpa Pelacakan Latar Belakang</h3>
+        <p>Akses lokasi GPS hanya aktif saat Anda sedang membuka kamera. Aplikasi tidak pernah melacak posisi Anda saat aplikasi ditutup.</p>
+      </div>
+
+      <div class="highlight-card">
+        <div class="highlight-icon icon-amber">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+        </div>
+        <h3>Bebas Iklan & Tanpa Penjualan Data</h3>
+        <p>Kami tidak menggunakan SDK iklan pihak ketiga yang melacak perilaku Anda, dan tidak pernah menjual data pribadi pengguna.</p>
+      </div>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="content-box">
+      <h2>1. Pendahuluan</h2>
+      <p>
+        Selamat datang di <strong>GPS Map Camera</strong> ("kami", "aplikasi"). Kebijakan Privasi ini dibuat untuk menjelaskan bagaimana aplikasi mengelola, memproses, dan melindungi informasi Anda saat menggunakan aplikasi kamera dokumentasi berbasis GPS ini pada perangkat Android.
+      </p>
+      <p>
+        Aplikasi ini dirancang khusus untuk para profesional lapangan, surveyor, teknisi konstruksi, petugas inspeksi, dan masyarakat umum yang membutuhkan foto serta video dengan cap stempel data geografis (koordinat, alamat, waktu, kompas, dan cuaca) yang akurat. Kami sangat memprioritaskan kerahasiaan data dan kedaulatan informasi Anda.
+      </p>
+    </div>
+
+    <!-- Section 2: Permissions -->
+    <div class="content-box">
+      <h2>2. Izin Perangkat & Data yang Digunakan</h2>
+      <p>
+        Agar fitur stempel geografis dapat berjalan dengan presisi, aplikasi meminta izin akses perangkat keras berikut:
+      </p>
+
+      <div class="permission-item">
+        <div class="permission-header">
+          <span class="perm-name">📍 Lokasi Presisi & Perkiraan (GPS)</span>
+          <span class="perm-code">ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION</span>
+        </div>
+        <div class="permission-desc">
+          <strong>Tujuan:</strong> Mengukur titik koordinat (Lintang, Bujur, Ketinggian/Elevasi, dan Akurasi) untuk dicetak secara langsung pada stempel watermark foto dan video.<br>
+          <strong>Cakupan:</strong> Lokasi hanya diakses secara transien saat Anda membuka layar kamera atau fitur peta manual. Aplikasi <em>tidak melacak</em> di latar belakang (background) ketika aplikasi diminimalkan atau ditutup.
+        </div>
+      </div>
+
+      <div class="permission-item">
+        <div class="permission-header">
+          <span class="perm-name">📷 Kamera</span>
+          <span class="perm-code">CAMERA</span>
+        </div>
+        <div class="permission-desc">
+          <strong>Tujuan:</strong> Menyediakan jendela bidik (viewfinder) kamera, memindai barcode/QR code langsung di perangkat (on-device ML Kit), mengambil foto beresolusi tinggi, serta merekam video dokumentasi lapangan.
+        </div>
+      </div>
+
+      <div class="permission-item">
+        <div class="permission-header">
+          <span class="perm-name">🎙️ Mikrofon (Perekam Audio)</span>
+          <span class="perm-code">RECORD_AUDIO</span>
+        </div>
+        <div class="permission-desc">
+          <strong>Tujuan:</strong> Merekam suara saat Anda memilih mode perekaman video dokumentasi. Audio disimpan bersama file video di penyimpanan lokal Anda dan tidak pernah dikirim ke pihak luar.
+        </div>
+      </div>
+
+      <div class="permission-item">
+        <div class="permission-header">
+          <span class="perm-name">💾 Penyimpanan & Galeri Media</span>
+          <span class="perm-code">READ_MEDIA_IMAGES, READ_MEDIA_VIDEO, WRITE_EXTERNAL_STORAGE</span>
+        </div>
+        <div class="permission-desc">
+          <strong>Tujuan:</strong> Menyimpan hasil foto dan video ke galeri perangkat Anda (folder publik <code>DCIM/CameraGPS</code>), serta memungkinkan Anda memilih foto dari galeri saat membuat laporan kerja PDF atau stempel ulang.
+        </div>
+      </div>
+
+      <div class="permission-item">
+        <div class="permission-header">
+          <span class="perm-name">🧭 Sensor Perangkat (Kompas & Giroskop/Akselerometer)</span>
+          <span class="perm-code">Hardware Sensor</span>
+        </div>
+        <div class="permission-desc">
+          <strong>Tujuan:</strong> Menghitung arah mata angin (azimuth kompas) serta sudut kemiringan (pitch/roll level) secara langsung di RAM ponsel untuk dicantumkan pada label stempel. Data sensor tidak pernah direkam atau dikirim ke internet.
+        </div>
+      </div>
+
+      <div class="permission-item">
+        <div class="permission-header">
+          <span class="perm-name">🌐 Koneksi Internet & Jaringan</span>
+          <span class="perm-code">INTERNET, ACCESS_NETWORK_STATE</span>
+        </div>
+        <div class="permission-desc">
+          <strong>Tujuan:</strong> Digunakan terbatas untuk 3 layanan pembantu yang ramah privasi:
+          <ol style="margin-top: 6px; padding-left: 20px;">
+            <li><strong>Reverse Geocoding (OpenStreetMap Nominatim):</strong> Menerjemahkan angka koordinat GPS menjadi nama jalan, kelurahan, kecamatan, dan kota.</li>
+            <li><strong>Prakiraan Cuaca (Open-Meteo API):</strong> Mengambil informasi suhu dan kondisi cuaca setempat berdasarkan koordinat.</li>
+            <li><strong>Ubin Peta Mini (CartoDB / OpenStreetMap / ESRI):</strong> Mengunduh thumbnail peta kecil yang tersemat pada sudut stempel foto.</li>
+          </ol>
+          <em>Catatan: Hanya angka koordinat geografis yang dikirimkan dalam permintaan HTTP ini; tidak ada nama pengguna, identitas perangkat (IMEI), nomor telepon, atau foto yang dikirimkan.</em>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: Data Safety Google Play Summary -->
+    <div class="content-box">
+      <h2>3. Pernyataan Keamanan Data (Google Play Data Safety)</h2>
+      <p>
+        Tabel berikut merangkum deklarasi resmi formulir Keamanan Data (Data Safety Section) di Google Play Console:
+      </p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Jenis Data</th>
+              <th>Dikumpulkan?</th>
+              <th>Dibagikan ke Pihak Ketiga?</th>
+              <th>Penyimpanan & Pemrosesan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Lokasi Presisi & Perkiraan</strong></td>
+              <td><span class="status-badge status-yes-local">Ya (Sementara)</span></td>
+              <td><span class="status-badge status-no">Tidak</span></td>
+              <td>Diproses secara lokal di perangkat untuk stempel. Tidak disimpan di server eksternal.</td>
+            </tr>
+            <tr>
+              <td><strong>Foto & Video</strong></td>
+              <td><span class="status-badge status-yes-local">Ya (Lokal)</span></td>
+              <td><span class="status-badge status-no">Tidak</span></td>
+              <td>Disimpan langsung pada folder penyimpanan internal pengguna (DCIM/CameraGPS).</td>
+            </tr>
+            <tr>
+              <td><strong>Rekaman Audio</strong></td>
+              <td><span class="status-badge status-yes-local">Ya (Lokal)</span></td>
+              <td><span class="status-badge status-no">Tidak</span></td>
+              <td>Hanya saat merekam video. Disimpan secara lokal di dalam file video pengguna.</td>
+            </tr>
+            <tr>
+              <td><strong>Identitas Pribadi (Nama, Email, Akun)</strong></td>
+              <td><span class="status-badge status-no">Tidak Ada</span></td>
+              <td><span class="status-badge status-no">Tidak</span></td>
+              <td>Aplikasi dapat digunakan langsung tanpa registrasi akun, login, atau kata sandi.</td>
+            </tr>
+            <tr>
+              <td><strong>Pelacak / Advertising ID</strong></td>
+              <td><span class="status-badge status-no">Tidak Ada</span></td>
+              <td><span class="status-badge status-no">Tidak</span></td>
+              <td>Tidak ada SDK analitik pihak ketiga atau iklan (bebas AdMob/Firebase Analytics).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Section 4: Data Retention & Deletion -->
+    <div class="content-box">
+      <h2>4. Penyimpanan, Retensi, dan Penghapusan Data</h2>
+      <p>
+        Karena seluruh hasil dokumentasi foto, video, dan laporan PDF disimpan langsung pada memori fisik perangkat Anda:
+      </p>
+      <ul>
+        <li><strong>Kontrol Penuh Pengguna:</strong> Anda dapat melihat, memindahkan, mencadangkan, atau menghapus setiap file foto/video kapan saja melalui aplikasi Galeri bawaan ponsel atau File Manager.</li>
+        <li><strong>Penghapusan Aplikasi (Uninstall):</strong> Menghapus aplikasi GPS Map Camera akan menghapus setelan aplikasi lokal (seperti template favorit, teks catatan kustom). Foto dan video yang sudah tersimpan di folder galeri publik ponsel tetap aman dan tidak terhapus otomatis kecuali Anda memilih untuk menghapusnya.</li>
+        <li><strong>Hak Permintaan Data:</strong> Karena kami tidak menyimpan data Anda di server cloud mana pun, tidak ada data pribadi Anda yang tersimpan di pihak kami yang perlu dihapus melalui server.</li>
+      </ul>
+    </div>
+
+    <!-- Section 5: Children Privacy -->
+    <div class="content-box">
+      <h2>5. Privasi Anak (COPPA & Perlindungan Anak)</h2>
+      <p>
+        Aplikasi GPS Map Camera ditujukan untuk kalangan profesional dan masyarakat umum yang memerlukan alat dokumentasi lapangan. Aplikasi ini tidak menargetkan dan tidak secara sengaja mengumpulkan informasi pengenal pribadi apa pun dari anak-anak di bawah usia 13 tahun (atau batas usia yang ditentukan oleh hukum setempat).
+      </p>
+    </div>
+
+    <!-- Section 6: Security -->
+    <div class="content-box">
+      <h2>6. Keamanan Informasi</h2>
+      <p>
+        Kami menerapkan prinsip keamanan secara arsitektural (<em>Privacy by Design</em>). Karena seluruh operasi pembubuhan watermark, stempel koordinat, dan kompilasi laporan PDF berjalan secara offline di ruang memori (RAM) perangkat Anda tanpa sinkronisasi cloud pihak ketiga, data Anda terisolasi dari potensi kebocoran data di internet.
+      </p>
+    </div>
+
+    <!-- Section 7: Changes -->
+    <div class="content-box">
+      <h2>7. Perubahan pada Kebijakan Privasi</h2>
+      <p>
+        Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu jika terdapat penambahan fitur baru atau penyesuaian regulasi hukum Google Play Store. Tanggal revisi terbaru akan selalu diperbarui pada bagian atas dokumen ini dan dapat diakses langsung dari menu Setelan di dalam aplikasi.
+      </p>
+    </div>
+
+    <!-- Section 8: Contact -->
+    <div class="content-box">
+      <h2>8. Kontak Pengembang</h2>
+      <p>
+        Jika Anda memiliki pertanyaan, masukan, atau kendala mengenai Kebijakan Privasi ini, silakan hubungi tim kami melalui:
+      </p>
+      <div class="contact-card">
+        <strong>GPS Map Camera Development Team</strong>
+        <div class="contact-item">
+          <span>📧 Email Dukungan:</span>
+          <a href="mailto:support@gpsmapcamera.app">support@gpsmapcamera.app</a>
+        </div>
+        <div class="contact-item">
+          <span>🏢 Pengembang:</span>
+          <span>Nadirah Labs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- ENGLISH CONTENT (Google Play Store Reviewer Friendly) -->
+  <!-- ========================================================================= -->
+  <div id="content-en" style="display: none;">
+    <!-- Quick Highlights -->
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="highlight-icon icon-green">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        </div>
+        <h3>100% On-Device Processing</h3>
+        <p>All captured photos, videos, and geotag overlays are generated directly on your device. No media is uploaded to external cloud servers.</p>
+      </div>
+
+      <div class="highlight-card">
+        <div class="highlight-icon icon-blue">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        </div>
+        <h3>No Background Tracking</h3>
+        <p>GPS location access is active only while actively using the camera screen. The app never tracks your location when minimized or closed.</p>
+      </div>
+
+      <div class="highlight-card">
+        <div class="highlight-icon icon-amber">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+        </div>
+        <h3>No Ads & No Data Selling</h3>
+        <p>We do not embed third-party advertising SDKs, we do not track behavioral user profiles, and we never sell user data.</p>
+      </div>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="content-box">
+      <h2>1. Introduction</h2>
+      <p>
+        Welcome to <strong>GPS Map Camera</strong> ("we", "our", or "the App"). We are committed to safeguarding your privacy. This Privacy Policy outlines how the App handles, processes, and protects your information on Android devices.
+      </p>
+      <p>
+        The App is built specifically for surveyors, civil engineers, field technicians, inspectors, and general users who require verified photographic and video documentation stamped with exact GPS coordinates, address, timestamp, compass azimuth, and weather conditions.
+      </p>
+    </div>
+
+    <!-- Section 2: Permissions -->
+    <div class="content-box">
+      <h2>2. Permissions and Information We Collect</h2>
+      <p>
+        To deliver accurate metadata stamping and camera functionality, the App requests permission to access the following hardware and software capabilities:
+      </p>
+
+      <div class="permission-item">
+        <div class="permission-header">
+          <span class="perm-name">📍 Precise & Approximate Location</span>
+          <span class="perm-code">ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION</span>
+        </div>
+        <div class="permission-desc">
+          <strong>Purpose:</strong> Calculates real-time geographical coordinates (Latitude, Longitude, Altitude, UTM/MGRS coordinates, and accuracy) to embed directly into photos and videos as watermarks.<br>
+          <strong>Scope:</strong> Location data is accessed only while actively viewing the camera preview or manual map screen. The App <em>never runs location services in the background</em> when the app is closed.
+        </div>
+      </div>
+
+      <div class="permission-item">
+        <div class="permission-header">
+          <span class="perm-name">📷 Camera</span>
+          <span class="perm-code">CAMERA</span>
+        </div>
+        <div class="permission-desc">
+          <strong>Purpose:</strong> Displays live camera viewfinder, captures high-resolution photographs, records video clips, and performs on-device Barcode/QR scanning using Google ML Kit.
+        </div>
+      </div>
+
+      <div class="permission-item">
+        <div class="permission-header">
+          <span class="perm-name">🎙️ Microphone (Audio Recording)</span>
+          <span class="perm-code">RECORD_AUDIO</span>
+        </div>
+        <div class="permission-desc">
+          <strong>Purpose:</strong> Records audio synchronized with video clips when video mode is initiated by the user. Audio is saved locally within the user's video file.
+        </div>
+      </div>
+
+      <div class="permission-item">
+        <div class="permission-header">
+          <span class="perm-name">💾 Storage & Media Gallery</span>
+          <span class="perm-code">READ_MEDIA_IMAGES, READ_MEDIA_VIDEO, WRITE_EXTERNAL_STORAGE</span>
+        </div>
+        <div class="permission-desc">
+          <strong>Purpose:</strong> Saves stamped photos and recorded videos to your device's media library under <code>DCIM/CameraGPS</code>, and allows selecting photos when generating PDF work reports.
+        </div>
+      </div>
+
+      <div class="permission-item">
+        <div class="permission-header">
+          <span class="perm-name">🧭 Hardware Sensors (Compass, Magnetometer & Accelerometer)</span>
+          <span class="perm-code">Hardware Sensor</span>
+        </div>
+        <div class="permission-desc">
+          <strong>Purpose:</strong> Computes magnetic compass heading (azimuth) and device tilt angle (pitch and roll) directly in memory to render directional badges on photos. Sensor readings are never transmitted online.
+        </div>
+      </div>
+
+      <div class="permission-item">
+        <div class="permission-header">
+          <span class="perm-name">🌐 Internet & Network State</span>
+          <span class="perm-code">INTERNET, ACCESS_NETWORK_STATE</span>
+        </div>
+        <div class="permission-desc">
+          <strong>Purpose:</strong> Strictly utilized for three privacy-respecting helper services:
+          <ol style="margin-top: 6px; padding-left: 20px;">
+            <li><strong>Reverse Geocoding (OpenStreetMap Nominatim):</strong> Resolves GPS coordinates into street names, districts, and cities.</li>
+            <li><strong>Live Weather (Open-Meteo API):</strong> Retrieves current temperature and atmospheric conditions based on coordinates.</li>
+            <li><strong>Map Tile Snapshots (CartoDB / OpenStreetMap / ESRI):</strong> Downloads small map tiles displayed on the stamp overlay.</li>
+          </ol>
+          <em>Note: Only numerical latitude/longitude coordinates are sent in these requests. No personal identifiers, phone identifiers, or photos are ever transmitted.</em>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: Data Safety Google Play Summary -->
+    <div class="content-box">
+      <h2>3. Google Play Data Safety Summary</h2>
+      <p>
+        The table below reflects our declarations in the Google Play Console Data Safety section:
+      </p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Data Type</th>
+              <th>Collected?</th>
+              <th>Shared with Third Parties?</th>
+              <th>Storage & Processing</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Precise & Coarse Location</strong></td>
+              <td><span class="status-badge status-yes-local">Yes (Ephemeral)</span></td>
+              <td><span class="status-badge status-no">No</span></td>
+              <td>Processed locally on-device for stamp rendering. Not stored on external servers.</td>
+            </tr>
+            <tr>
+              <td><strong>Photos & Videos</strong></td>
+              <td><span class="status-badge status-yes-local">Yes (Local)</span></td>
+              <td><span class="status-badge status-no">No</span></td>
+              <td>Saved exclusively to the user's local device storage (DCIM/CameraGPS).</td>
+            </tr>
+            <tr>
+              <td><strong>Audio Recordings</strong></td>
+              <td><span class="status-badge status-yes-local">Yes (Local)</span></td>
+              <td><span class="status-badge status-no">No</span></td>
+              <td>Recorded during video capture and kept strictly within local video files.</td>
+            </tr>
+            <tr>
+              <td><strong>Personal Identifiers</strong></td>
+              <td><span class="status-badge status-no">None</span></td>
+              <td><span class="status-badge status-no">No</span></td>
+              <td>No account registration, login, phone numbers, or email requirements.</td>
+            </tr>
+            <tr>
+              <td><strong>Advertising / Tracking IDs</strong></td>
+              <td><span class="status-badge status-no">None</span></td>
+              <td><span class="status-badge status-no">No</span></td>
+              <td>No third-party advertising SDKs or analytics trackers (no AdMob/Firebase).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Section 4: Data Retention & Deletion -->
+    <div class="content-box">
+      <h2>4. Data Retention and Deletion</h2>
+      <p>
+        Because all photos, videos, and generated PDF reports reside strictly in your device storage:
+      </p>
+      <ul>
+        <li><strong>Full User Ownership:</strong> You have complete authority to view, copy, share, or delete any media file at any time using your phone's native Gallery or File Manager.</li>
+        <li><strong>App Uninstallation:</strong> Uninstalling the App removes local configuration preferences (such as custom templates and notes). Stamped photos saved to your public gallery (`DCIM/CameraGPS`) will remain intact on your phone unless you manually delete them.</li>
+        <li><strong>No Cloud Retention:</strong> Since we do not host user data on cloud servers, no account or remote data deletion request is required.</li>
+      </ul>
+    </div>
+
+    <!-- Section 5: Children Privacy -->
+    <div class="content-box">
+      <h2>5. Children's Privacy (COPPA Compliance)</h2>
+      <p>
+        GPS Map Camera is intended for general audiences and professionals. The App does not knowingly collect, solicit, or maintain personal information from children under the age of 13.
+      </p>
+    </div>
+
+    <!-- Section 6: Security -->
+    <div class="content-box">
+      <h2>6. Security</h2>
+      <p>
+        We employ privacy-by-design principles. Because image composition, GPS watermarking, and PDF compilation execute locally in phone RAM without cloud uploads, your documentation remains protected against remote interception and cloud data breaches.
+      </p>
+    </div>
+
+    <!-- Section 7: Changes -->
+    <div class="content-box">
+      <h2>7. Changes to This Privacy Policy</h2>
+      <p>
+        We may update this Privacy Policy periodically to reflect app updates or regulatory requirements. Any modifications will be reflected with an updated revision date at the top of this page and accessible within the App's settings menu.
+      </p>
+    </div>
+
+    <!-- Section 8: Contact -->
+    <div class="content-box">
+      <h2>8. Contact Information</h2>
+      <p>
+        If you have any questions, inquiries, or suggestions regarding this Privacy Policy, please contact our team:
+      </p>
+      <div class="contact-card">
+        <strong>GPS Map Camera Development Team</strong>
+        <div class="contact-item">
+          <span>📧 Support Email:</span>
+          <a href="mailto:support@gpsmapcamera.app">support@gpsmapcamera.app</a>
+        </div>
+        <div class="contact-item">
+          <span>🏢 Organization:</span>
+          <span>Nadirah Labs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 GPS Map Camera. All rights reserved.</p>
+    <p style="margin-top: 6px; font-size: 12px; color: #64748B;">
+      Package: <code>com.nadirah.labs.gpsmapcamera</code> &bull; Google Play Developer Policy Compliant
+    </p>
+  </footer>
+</div>
+
+<script>
+  function setLanguage(lang) {
+    const idContent = document.getElementById('content-id');
+    const enContent = document.getElementById('content-en');
+    const btnId = document.getElementById('btn-id');
+    const btnEn = document.getElementById('btn-en');
+    const pageTitle = document.getElementById('page-title');
+
+    if (lang === 'en') {
+      idContent.style.display = 'none';
+      enContent.style.display = 'block';
+      btnId.classList.remove('active');
+      btnEn.classList.add('active');
+      pageTitle.textContent = 'Privacy Policy';
+      document.documentElement.lang = 'en';
+    } else {
+      idContent.style.display = 'block';
+      enContent.style.display = 'none';
+      btnEn.classList.remove('active');
+      btnId.classList.add('active');
+      pageTitle.textContent = 'Kebijakan Privasi';
+      document.documentElement.lang = 'id';
+    }
+  }
+
+  // Auto-detect browser language or query param ?lang=en
+  (function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const langParam = urlParams.get('lang');
+    if (langParam === 'en') {
+      setLanguage('en');
+    } else if (langParam === 'id') {
+      setLanguage('id');
+    }
+  })();
+</script>
+
+</body>
+</html>
